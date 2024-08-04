@@ -55,6 +55,10 @@ const TravelGuide = () => {
     return description.substring(0, maxLength) + "...";
   };
 
+  const handleArticleClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className={`travel-guide ${theme}`}>
       <header>
@@ -73,51 +77,43 @@ const TravelGuide = () => {
       </div>
       <div className="articles">
         {articles.map((article) => (
-          <a
+          <div
             key={article.eid}
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="article-link"
+            className="article"
+            onClick={() => handleArticleClick(article.url)}
           >
-            <div className="article">
-              <img
-                src={article.photos[0]}
-                alt={article.title}
-                className="main-photo"
-              />
-              <div className="article-content">
-                <h2>{article.title}</h2>
-                <p>
-                  {truncateDescription(article.description, 100)}{" "}
+            <img
+              src={article.photos[0]}
+              alt={article.title}
+              className="main-photo"
+            />
+            <div className="article-content">
+              <h2>{article.title}</h2>
+              <p>
+                {truncateDescription(article.description, 100)}{" "}
+                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  อ่านต่อ
+                </a>
+              </p>
+              <div className="categories">
+                {article.tags.map((tag, index) => (
                   <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    key={index}
+                    href="#"
+                    onClick={(event) => handleCategoryClick(tag, event)}
+                    className="category"
                   >
-                    อ่านต่อ
+                    {tag}
                   </a>
-                </p>
-                <div className="categories">
-                  {article.tags.map((tag, index) => (
-                    <a
-                      key={index}
-                      href="#"
-                      onClick={(event) => handleCategoryClick(tag, event)}
-                      className="category"
-                    >
-                      {tag}
-                    </a>
-                  ))}
-                </div>
-                <div className="photos">
-                  {article.photos.slice(1).map((photo, index) => (
-                    <img key={index} src={photo} alt={`photo-${index}`} />
-                  ))}
-                </div>
+                ))}
+              </div>
+              <div className="photos">
+                {article.photos.slice(1).map((photo, index) => (
+                  <img key={index} src={photo} alt={`photo-${index}`} />
+                ))}
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
