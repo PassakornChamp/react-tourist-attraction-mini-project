@@ -43,8 +43,8 @@ h1 {
 
 .search-bar {
   margin: 20px auto;
-  width: 100%;
-  max-width: 1000px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .search-bar input {
@@ -73,6 +73,13 @@ body.dark .search-bar input {
   align-items: center;
 }
 
+.article-link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 800px;
+}
+
 .article {
   display: flex;
   flex-direction: row;
@@ -81,7 +88,6 @@ body.dark .search-bar input {
   border-radius: 10px;
   margin: 20px;
   width: 100%;
-  max-width: 800px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -99,8 +105,8 @@ body.dark .article {
 }
 
 .article .main-photo {
-  width: 250px;
-  height: 320px;
+  width: 300px;
+  height: 350px;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
