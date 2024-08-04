@@ -35,6 +35,7 @@ const TravelGuide = () => {
 
   const handleCategoryClick = (category, event) => {
     event.preventDefault(); // Prevent default link behavior
+    event.stopPropagation(); // Stop propagation to prevent triggering article click
     setKeywords(category);
     fetchArticles(category);
   };
