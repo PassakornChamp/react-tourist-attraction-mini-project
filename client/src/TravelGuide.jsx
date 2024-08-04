@@ -33,7 +33,8 @@ const TravelGuide = () => {
     fetchArticles(newKeywords);
   };
 
-  const handleCategoryClick = (category) => {
+  const handleCategoryClick = (category, event) => {
+    event.preventDefault(); // Prevent default link behavior
     setKeywords(category);
     fetchArticles(category);
   };
@@ -99,13 +100,14 @@ const TravelGuide = () => {
                 </p>
                 <div className="categories">
                   {article.tags.map((tag, index) => (
-                    <span
+                    <a
                       key={index}
-                      onClick={() => handleCategoryClick(tag)}
+                      href="#"
+                      onClick={(event) => handleCategoryClick(tag, event)}
                       className="category"
                     >
                       {tag}
-                    </span>
+                    </a>
                   ))}
                 </div>
                 <div className="photos">

@@ -141,6 +141,8 @@ body.dark .article {
   font-size: 0.9em;
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
 }
 
 body.dark .article-content .categories .category {
