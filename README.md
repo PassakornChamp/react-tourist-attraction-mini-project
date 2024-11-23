@@ -1,7 +1,7 @@
 
 # React Tourist Attraction Mini Project
 
-A responsive and interactive travel guide application that allows users to explore and read travel articles with a dynamic, user-friendly interface. Designed with modern web development principles, this project provides an optimal experience across all devices.
+A responsive and interactive travel guide application that allows users to explore and read travel articles with a dynamic, user-friendly interface. This project is designed with modern web development principles and provides an optimal experience across all devices.
 
 ## Features
 
@@ -37,13 +37,7 @@ A responsive and interactive travel guide application that allows users to explo
    ```
    The application will be available at `http://localhost:3000`.
 
-## Screenshots
 
-### Light Theme
-![Light Theme Screenshot](path-to-light-theme-screenshot)
-
-### Dark Theme
-![Dark Theme Screenshot](path-to-dark-theme-screenshot)
 
 ## Future Improvements
 
@@ -55,9 +49,6 @@ A responsive and interactive travel guide application that allows users to explo
 
 Contributions are welcome! If you have suggestions or find bugs, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
@@ -65,6 +56,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **GitHub**: [PassakornChamp](https://github.com/PassakornChamp)  
 - **Email**: passkorn.dev@gmail.com  
 
----
 
-Feel free to replace the placeholder paths in the "Screenshots" section with actual image paths. Let me know if you'd like assistance with that!
